@@ -1,6 +1,6 @@
 import { Navigation } from "../components/Navigation";
 import { Footer } from "../components/Footer";
-import { Award, Users, Medal } from "lucide-react";
+import { Award, Users, Medal, User } from "lucide-react";
 
 export function Team() {
   const coreCommittee = [
@@ -196,7 +196,7 @@ export function Team() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 justify-center">
+          <div className="flex flex-wrap justify-center gap-4">
             {coreTeamMembers.map((member, index) => (
               <div
                 key={index}
