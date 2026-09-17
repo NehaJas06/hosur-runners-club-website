@@ -60,24 +60,17 @@ export function Team() {
       category: "founder"
     },
     {
-      name: "Mohana Krishnan A R",
-      position: "Co-Founder",
-      category: "founder"
-    },
-    {
-      name: "Manoharan N",
-      position: "Co-Founder",
+      name: "Mr. Ashvath Narayana",
+      position: "President",
+      achievement: "Chairman, Advaith International Academy",
       category: "founder"
     }
   ];
 
   const coreTeamMembers = [
-    "Kanagaraj P",
-    "Manoharan N",
-    "Suresh Kumar H",
-    "Mohana Krishnan A R",
-    "Thandeswaran P",
-    "Thirupathi M"
+    { name: "Thandeswaran P", position: "Founder" },
+    { name: "Mr. Ashvath Narayana", position: "President" },
+    { name: "Kanagaraj P", position: "General Secretary" }
   ];
 
   return (
@@ -98,34 +91,39 @@ export function Team() {
         </div>
       </section>
 
-      {/* Founders Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-[#FF8C00]/10 px-6 py-2 rounded-full mb-4">
-              <Award className="text-[#FF8C00]" size={24} />
-              <span className="text-[#FF8C00] font-semibold">Founding Members</span>
+      {/* Founder Section */}
+      <section className="relative overflow-hidden py-16 bg-gradient-to-br from-white via-white to-[#FFF7ED]">
+        <div className="absolute -left-24 top-16 h-64 w-64 rounded-full bg-[#0066B3]/5" />
+        <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-[#FF8C00]/10" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 bg-[#FF8C00]/10 px-5 py-2 rounded-full mb-3">
+              <Award className="text-[#FF8C00]" size={20} />
+              <span className="text-[#FF8C00] font-semibold">Leadership</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#0066B3] mb-4">The Visionaries</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              The pioneers who started the Hosur Runners Club movement
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-3">
+              Our <span className="text-[#FF8C00]">Founder</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              The vision that started our journey
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            {founders.map((founder, index) => (
+          <div className="flex justify-center gap-6 flex-wrap">
+            {founders.map((founder) => (
               <div
-                key={index}
-                className="bg-gradient-to-br from-[#FF8C00] to-[#e67d00] p-8 rounded-3xl text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2"
+                key={founder.name}
+                className="w-full max-w-md bg-white rounded-3xl border border-[#FF8C00]/30 shadow-xl p-7 md:p-8 text-center"
               >
-                <div className="bg-white/20 w-20 h-20 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <Award size={40} />
+                <div className="mx-auto mb-5 w-16 h-16 rounded-full bg-gradient-to-br from-[#FFB347] to-[#FF8C00] flex items-center justify-center shadow-md">
+                  <Award className="text-white" size={32} />
                 </div>
-                <h3 className="font-bold text-2xl mb-2 text-center">{founder.name}</h3>
-                <p className="text-center text-lg mb-2 font-semibold">{founder.position}</p>
+                <h3 className="font-bold text-2xl text-gray-800 mb-2">{founder.name}</h3>
+                <p className="text-[#FF8C00] font-bold text-lg mb-4">{founder.position}</p>
                 {founder.achievement && (
-                  <div className="mt-4 pt-4 border-t border-white/30">
-                    <p className="text-center text-sm bg-white/20 px-4 py-2 rounded-full">
+                  <div className="border-t border-[#FF8C00]/25 pt-4">
+                    <p className="text-sm text-gray-700 bg-[#FF8C00]/10 px-4 py-2 rounded-full">
                       {founder.achievement}
                     </p>
                   </div>
@@ -207,7 +205,8 @@ export function Team() {
                 <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
                   <Users className="text-white" size={24} />
                 </div>
-                <p className="font-semibold text-sm">{member}</p>
+                <p className="font-semibold text-sm">{member.name}</p>
+                <p className="text-xs mt-1">{member.position}</p>
               </div>
             ))}
           </div>
