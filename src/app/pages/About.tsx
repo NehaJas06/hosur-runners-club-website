@@ -77,7 +77,7 @@ export function About() {
                 <div className="text-sm opacity-90">WhatsApp Members</div>
               </div>
               <div className="bg-gradient-to-br from-[#FF8C00] to-[#e67d00] p-8 rounded-2xl text-white text-center">
-                <div className="text-5xl font-bold mb-2">73</div>
+                <div className="text-5xl font-bold mb-2">250+</div>
                 <div className="text-sm opacity-90">Strava Athletes</div>
               </div>
               <div className="col-span-2 bg-gradient-to-br from-[#00A651] to-[#008f46] p-8 rounded-2xl text-white text-center">

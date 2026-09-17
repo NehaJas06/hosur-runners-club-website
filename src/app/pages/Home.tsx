@@ -275,23 +275,28 @@ export function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all">
-              <div className="text-[#FF8C00] text-5xl mb-4">🏥</div>
-              <h3 className="font-bold text-2xl mb-3">Hospital Visits</h3>
-              <p className="text-gray-200 mb-3">Promote health awareness among doctors with our message: "Healthy doctors = Healthy society."</p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all">
-              <div className="text-[#FF8C00] text-5xl mb-4">🏢</div>
-              <h3 className="font-bold text-2xl mb-3">Corporate Engagement</h3>
-              <p className="text-gray-200 mb-3">Partner with companies to encourage employees to join our running community for improved health and productivity.</p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-all">
-              <div className="text-[#FF8C00] text-5xl mb-4">🏛️</div>
-              <h3 className="font-bold text-2xl mb-3">Government Outreach</h3>
-              <p className="text-gray-200 mb-3">Invite officials to join the Hosur Runners Club and promote community health benefits.</p>
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm p-8 md:p-10 rounded-3xl border border-white/25 shadow-xl text-center">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#FF8C00] text-white font-bold text-sm mb-5">
+                UPCOMING EVENT
+              </div>
+              <h3 className="font-bold text-3xl md:text-4xl mb-5">Lumen Laps Trackathon 2026</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left max-w-4xl mx-auto">
+                <div className="bg-white/10 rounded-xl p-4">
+                  <p className="font-semibold text-[#FF8C00] mb-1">Date</p>
+                  <p className="text-gray-100">Saturday, 19 September 2026</p>
+                </div>
+                <div className="bg-white/10 rounded-xl p-4">
+                  <p className="font-semibold text-[#FF8C00] mb-1">Time</p>
+                  <p className="text-gray-100">6:00 PM – 12:00 AM</p>
+                </div>
+                <div className="bg-white/10 rounded-xl p-4">
+                  <p className="font-semibold text-[#FF8C00] mb-1">Venue</p>
+                  <p className="text-gray-100">Advaith International Academy Ground, Hosur</p>
+                </div>
+              </div>
+              <p className="text-xl font-semibold mt-6">All are welcome</p>
+              <p className="text-2xl font-bold text-[#FF8C00] mt-2">Run Together. Rise Together.</p>
             </div>
           </div>
         </div>

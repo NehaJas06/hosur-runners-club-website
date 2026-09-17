@@ -68,7 +68,7 @@ export function Footer() {
             </div>
             <div className="mt-6">
               <p className="text-sm text-gray-200">Total Members:</p>
-              <p className="font-bold text-[#00A651]">89+ Runners</p>
+              <p className="font-bold text-[#00A651]">150+</p>
             </div>
           </div>
         </div>

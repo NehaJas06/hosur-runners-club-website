@@ -5,34 +5,49 @@ import { Award, Users, Medal } from "lucide-react";
 export function Team() {
   const coreCommittee = [
     {
-      name: "Dr. S. Vijay Baskaran",
+      name: "Mr. Ashvath Narayana",
       position: "President",
-      role: "Executive Director, Kauvery Hospitals, Hosur",
+      role: "Chairman, Advaith International Academy",
       category: "leadership"
     },
     {
       name: "Kanagaraj P",
-      position: "Vice President",
+      position: "General Secretary",
       category: "leadership"
     },
     {
       name: "Suresh Kumar H",
+      position: "Vice President 1",
+      category: "leadership"
+    },
+    {
+      name: "Kalidas R",
+      position: "Vice President 2",
+      category: "leadership"
+    },
+    {
+      name: "Balasundaram",
+      position: "Vice President 3",
+      category: "leadership"
+    },
+    {
+      name: "Boopathi P",
       position: "Secretary 1",
       category: "administration"
     },
     {
-      name: "Boopathi P",
+      name: "Nagabhushan Reddy",
       position: "Secretary 2",
+      category: "administration"
+    },
+    {
+      name: "Rajesh",
+      position: "Secretary 3",
       category: "administration"
     },
     {
       name: "Thirupathi M",
       position: "Treasurer",
-      category: "administration"
-    },
-    {
-      name: "Mohana Krishnan A R",
-      position: "Public Relation Management",
       category: "administration"
     }
   ];
@@ -217,8 +232,8 @@ export function Team() {
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 text-center">
-              <div className="text-6xl font-bold mb-2">73</div>
-              <div className="text-xl mb-2">Strava Athletes</div>
+              <div className="text-6xl font-bold mb-2">150+</div>
+              <div className="text-xl mb-2">Members</div>
               <p className="text-gray-100 text-sm">Runners tracking their progress together</p>
             </div>
 

@@ -45,7 +45,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl mb-1">Join us on Strava</h3>
-                    <p className="text-gray-100 text-sm mb-2">Connect with 73 active runners</p>
+                    <p className="text-gray-100 text-sm mb-2">Connect with 250+ members</p>
                     <p className="text-sm opacity-90">strava.com/clubs/1232752</p>
                   </div>
                 </a>
@@ -106,7 +106,7 @@ export function Contact() {
                   <div>
                     <h3 className="font-bold text-xl text-[#FF8C00] mb-2">Community Size</h3>
                     <p className="text-gray-700 mb-2">89+ Members on WhatsApp</p>
-                    <p className="text-gray-700">150+ Strava Athletes on Strava</p>
+                    <p className="text-gray-700">150+ Athletes on Strava</p>
                   </div>
                 </div>
               </div>
@@ -153,8 +153,8 @@ export function Contact() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-[#0066B3]">
               <h3 className="font-bold text-xl text-[#0066B3] mb-2">President</h3>
-              <p className="text-gray-800 font-semibold mb-1">Dr. S. Vijay Baskaran</p>
-              <p className="text-gray-600 text-sm">Executive Director, Kauvery Hospitals, Hosur</p>
+              <p className="text-gray-800 font-semibold mb-1">Mr. Ashvath Narayana</p>
+              <p className="text-gray-600 text-sm">Chairman, Advaith International Academy</p>
             </div>
 
             <div className="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-[#FF8C00]">
