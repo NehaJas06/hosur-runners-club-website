@@ -164,9 +164,8 @@ export function Contact() {
             </div>
 
             <div className="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-[#00A651]">
-              <h3 className="font-bold text-xl text-[#00A651] mb-2">Public Relations</h3>
-              <p className="text-gray-800 font-semibold mb-1">Mohana Krishnan A R</p>
-              <p className="text-gray-600 text-sm">Co-Founder & PR Manager</p>
+              <h3 className="font-bold text-xl text-[#00A651] mb-2">General Secretary</h3>
+              <p className="text-gray-800 font-semibold mb-1">Kanagaraj P</p>
             </div>
           </div>
         </div>
