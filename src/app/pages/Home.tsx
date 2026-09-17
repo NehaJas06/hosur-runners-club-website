@@ -126,11 +126,11 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">89+</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">250+</div>
               <div className="text-sm md:text-base opacity-90">Active Members</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">73</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">150+</div>
               <div className="text-sm md:text-base opacity-90">Strava Athletes</div>
             </div>
             <div>
@@ -141,6 +141,52 @@ export function Home() {
               <div className="text-4xl md:text-5xl font-bold mb-2">100%</div>
               <div className="text-sm md:text-base opacity-90">Inclusive</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Committee Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-[#0066B3] rounded-full mb-4">
+              <Users size={20} />
+              <span className="font-semibold">Leadership</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0066B3] mb-4">Core Committee</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Our dedicated team managing club operations and growth
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              ["Mr. Ashvath Narayana", "President", "Chairman, Advaith International Academy", "#0066B3"],
+              ["Kanagaraj P", "General Secretary", "", "#0066B3"],
+              ["Suresh Kumar H", "Vice President 1", "", "#0066B3"],
+              ["Kalidas R", "Vice President 2", "", "#0066B3"],
+              ["Balasundaram", "Vice President 3", "", "#0066B3"],
+              ["Boopathi P", "Secretary 1", "", "#00A651"],
+              ["Nagabhushan Reddy", "Secretary 2", "", "#00A651"],
+              ["Rajesh", "Secretary 3", "", "#00A651"],
+              ["Thirupathi M", "Treasurer", "", "#00A651"],
+            ].map(([name, role, detail, color]) => (
+              <div
+                key={name}
+                className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all border-t-4"
+                style={{ borderTopColor: color }}
+              >
+                <div
+                  className="w-14 h-14 rounded-full flex items-center justify-center mb-4"
+                  style={{ backgroundColor: color }}
+                >
+                  <Users className="text-white" size={28} />
+                </div>
+                <h3 className="font-bold text-xl mb-2 text-gray-900">{name}</h3>
+                <p className="font-semibold mb-2" style={{ color }}>{role}</p>
+                {detail && <p className="text-gray-600">{detail}</p>}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -286,7 +332,7 @@ export function Home() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Start Your Journey?</h2>
           <p className="text-xl mb-8 text-gray-100">
-            Join 89+ runners in our inclusive community. Every runner matters, regardless of pace or experience.
+            Join 250+ runners in our inclusive community. Every runner matters, regardless of pace or experience.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
