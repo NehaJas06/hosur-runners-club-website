@@ -48,28 +48,14 @@ export function Home() {
       <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           {runnerSlides.map((image, index) => (
-            <div
+            <img
               key={image}
-              className={`absolute inset-0 transition-opacity duration-1000 ${
+              src={image}
+              alt={`Hosur Runners Club - slide ${index + 1}`}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
                 index === currentSlide ? "opacity-100" : "opacity-0"
               }`}
-            >
-              {/* Full-screen background keeps the hero filled without cropping the main photo. */}
-              <img
-                src={image}
-                alt=""
-                aria-hidden="true"
-                className="absolute inset-0 w-full h-full object-cover scale-110 blur-xl"
-              />
-              <div className="absolute inset-0 bg-black/20" />
-
-              {/* Complete original photo stays visible in the center. */}
-              <img
-                src={image}
-                alt={`Hosur Runners Club - slide ${index + 1}`}
-                className="relative z-10 w-full h-full object-contain"
-              />
-            </div>
+            />
           ))}
           <div className="absolute inset-0 bg-gradient-to-r from-[#0066B3]/90 via-[#0066B3]/70 to-black/20" />
         </div>
