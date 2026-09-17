@@ -148,7 +148,7 @@ export function Team() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {coreCommittee.map((member, index) => (
               <div
                 key={index}
@@ -196,14 +196,14 @@ export function Team() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 justify-center">
             {coreTeamMembers.map((member, index) => (
               <div
                 key={index}
                 className="bg-gradient-to-br from-[#00A651] to-[#008f46] p-6 rounded-2xl text-white text-center shadow-lg hover:shadow-xl transition-all hover:-translate-y-2"
               >
                 <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Users className="text-white" size={24} />
+                  <User className="text-white" size={24} />
                 </div>
                 <p className="font-semibold text-sm">{member.name}</p>
                 <p className="text-xs mt-1">{member.position}</p>
