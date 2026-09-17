@@ -45,14 +45,23 @@ export function Home() {
       <Navigation />
 
       {/* Hero Section / Hosur Runners Club Slideshow */}
-      <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full overflow-hidden">
+        {/* This invisible image keeps the hero at the active photo's natural aspect ratio.
+            That means every original photo is shown completely without cropping or stretching. */}
+        <img
+          src={runnerSlides[currentSlide]}
+          alt=""
+          aria-hidden="true"
+          className="block w-full h-auto opacity-0 pointer-events-none select-none"
+        />
+
         <div className="absolute inset-0">
           {runnerSlides.map((image, index) => (
             <img
               key={image}
               src={image}
               alt={`Hosur Runners Club - slide ${index + 1}`}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+              className={`absolute inset-0 w-full h-full object-fill transition-opacity duration-1000 ${
                 index === currentSlide ? "opacity-100" : "opacity-0"
               }`}
             />
