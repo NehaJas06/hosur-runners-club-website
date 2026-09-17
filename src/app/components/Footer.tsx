@@ -24,7 +24,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="block text-gray-200 hover:text-white transition-colors"
               >
-                Strava (73 Members)
+                Strava (250+ Members)
               </a>
               <a
                 href="https://www.facebook.com/share/g/19nHcx7Mki/?mibextid=wwXIfr"

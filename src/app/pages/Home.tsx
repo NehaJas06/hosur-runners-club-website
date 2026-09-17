@@ -10,8 +10,6 @@ import runner03 from "../../imports/runner-gallery/runner-03.jpg";
 import runner04 from "../../imports/runner-gallery/runner-04.jpg";
 import runner05 from "../../imports/runner-gallery/runner-05.jpg";
 import runner06 from "../../imports/runner-gallery/runner-06.jpg";
-import runner07 from "../../imports/runner-gallery/runner-07.jpg";
-import runner08 from "../../imports/runner-gallery/runner-08.jpg";
 import runner09 from "../../imports/runner-gallery/runner-09.jpg";
 
 export function Home() {
@@ -21,7 +19,7 @@ export function Home() {
   const trailImage = "https://images.unsplash.com/photo-1671906531003-8634ef6d597c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxydW5uaW5nJTIwc2hvZXMlMjB0cmFpbCUyMHBhdGh8ZW58MXx8fHwxNzgxNjc4MzAzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
 
   // Photos from the Hosur Runners Club PDF are used in the hero slideshow.
-  const runnerSlides = [runner01, runner02, runner03, runner04, runner05, runner06, runner07, runner08, runner09];
+  const runnerSlides = [runner01, runner02, runner03, runner04, runner05, runner06, runner09];
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {

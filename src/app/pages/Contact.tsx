@@ -106,7 +106,7 @@ export function Contact() {
                   <div>
                     <h3 className="font-bold text-xl text-[#FF8C00] mb-2">Community Size</h3>
                     <p className="text-gray-700 mb-2">89+ Members on WhatsApp</p>
-                    <p className="text-gray-700">73 Athletes on Strava</p>
+                    <p className="text-gray-700">150+ Strava Athletes on Strava</p>
                   </div>
                 </div>
               </div>
