@@ -11,6 +11,10 @@ import runner04 from "../../imports/runner-gallery/runner-04.jpg";
 import runner05 from "../../imports/runner-gallery/runner-05.jpg";
 import runner06 from "../../imports/runner-gallery/runner-06.jpg";
 import runner09 from "../../imports/runner-gallery/runner-09.jpg";
+import vdhmLogo from "../../imports/upcoming-initiatives/VDHM.png";
+import malnadLogo from "../../imports/upcoming-initiatives/Malnad.png";
+import tsw25kLogo from "../../imports/upcoming-initiatives/TSW25K.png";
+import tmmLogo from "../../imports/upcoming-initiatives/TMM.png";
 
 export function Home() {
   const heroImage = "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxydW5uZXJzJTIwZ3JvdXAlMjBqb2dnaW5nJTIwc3VucmlzZXxlbnwxfHx8fDE3ODE2NzgzMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
@@ -161,12 +165,12 @@ export function Home() {
             {[
               ["Mr. Ashvath Narayana", "President", "Chairman, Advaith International Academy", "#0066B3"],
               ["Kanagaraj P", "General Secretary", "", "#0066B3"],
-              ["Suresh Kumar H", "Vice President 1", "", "#0066B3"],
+              ["Balasundram G", "Vice President 1", "", "#0066B3"],
               ["Kalidas R", "Vice President 2", "", "#0066B3"],
-              ["Balasundaram", "Vice President 3", "", "#0066B3"],
-              ["Boopathi P", "Secretary 1", "", "#00A651"],
-              ["Nagabhushan Reddy", "Secretary 2", "", "#00A651"],
-              ["Rajesh", "Secretary 3", "", "#00A651"],
+              ["Boopathi P", "Vice President 3", "", "#0066B3"],
+              ["Nagabushan Reddy", "Secretary 1", "", "#00A651"],
+              ["Rajesh S", "Secretary 2", "", "#00A651"],
+              ["Karuppajah P", "Secretary 3", "", "#00A651"],
               ["Thirupathi M", "Treasurer", "", "#00A651"],
             ].map(([name, role, detail, color]) => (
               <div
@@ -275,29 +279,53 @@ export function Home() {
             </p>
           </div>
 
-          <div className="max-w-5xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm p-8 md:p-10 rounded-3xl border border-white/25 shadow-xl text-center">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#FF8C00] text-white font-bold text-sm mb-5">
-                UPCOMING EVENT
-              </div>
-              <h3 className="font-bold text-3xl md:text-4xl mb-5">Lumen Laps Trackathon 2026</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left max-w-4xl mx-auto">
-                <div className="bg-white/10 rounded-xl p-4">
-                  <p className="font-semibold text-[#FF8C00] mb-1">Date</p>
-                  <p className="text-gray-100">Saturday, 19 September 2026</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {[
+              {
+                name: "Vedanta Delhi Half Marathon",
+                date: "18-10-2026",
+                logo: vdhmLogo,
+                url: "https://vedantadelhihalfmarathon.procam.in/",
+              },
+              {
+                name: "Malnad Ultra",
+                date: "28-11-2026",
+                logo: malnadLogo,
+                url: "https://malnadultra.com/",
+              },
+              {
+                name: "Tata Steel World 25K",
+                date: "20-12-2026",
+                logo: tsw25kLogo,
+                url: "https://tatasteelworld25k.procam.in/race-categories/open-10k/information",
+              },
+              {
+                name: "Tata Mumbai Marathon",
+                date: "17-01-2027",
+                logo: tmmLogo,
+                url: "https://tatamumbaimarathon.procam.in/race-categories/marathon/registration-date",
+              },
+            ].map((event) => (
+              <a
+                key={event.name}
+                href={event.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-white/10 backdrop-blur-sm rounded-2xl border border-white/25 shadow-xl p-4 hover:bg-white/20 hover:-translate-y-1 transition-all"
+              >
+                <div className="h-40 bg-white rounded-xl flex items-center justify-center overflow-hidden">
+                  <img
+                    src={event.logo}
+                    alt={event.name}
+                    className="w-full h-full object-contain p-3 group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
-                <div className="bg-white/10 rounded-xl p-4">
-                  <p className="font-semibold text-[#FF8C00] mb-1">Time</p>
-                  <p className="text-gray-100">6:00 PM – 12:00 AM</p>
+                <div className="text-center pt-4">
+                  <p className="font-semibold text-[#FF8C00] text-lg">{event.date}</p>
+                  <p className="text-sm text-gray-200 mt-1">Click to visit event website</p>
                 </div>
-                <div className="bg-white/10 rounded-xl p-4">
-                  <p className="font-semibold text-[#FF8C00] mb-1">Venue</p>
-                  <p className="text-gray-100">Advaith International Academy Ground, Hosur</p>
-                </div>
-              </div>
-              <p className="text-xl font-semibold mt-6">All are welcome</p>
-              <p className="text-2xl font-bold text-[#FF8C00] mt-2">Run Together. Rise Together.</p>
-            </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>

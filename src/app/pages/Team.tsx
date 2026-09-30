@@ -16,7 +16,7 @@ export function Team() {
       category: "leadership"
     },
     {
-      name: "Suresh Kumar H",
+      name: "Balasundram G",
       position: "Vice President 1",
       category: "leadership"
     },
@@ -26,22 +26,22 @@ export function Team() {
       category: "leadership"
     },
     {
-      name: "Balasundaram",
+      name: "Boopathi P",
       position: "Vice President 3",
       category: "leadership"
     },
     {
-      name: "Boopathi P",
+      name: "Nagabushan Reddy",
       position: "Secretary 1",
       category: "administration"
     },
     {
-      name: "Nagabhushan Reddy",
+      name: "Rajesh S",
       position: "Secretary 2",
       category: "administration"
     },
     {
-      name: "Rajesh",
+      name: "Karuppajah P",
       position: "Secretary 3",
       category: "administration"
     },
