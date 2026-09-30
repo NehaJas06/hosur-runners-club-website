@@ -3,7 +3,6 @@ import { Navigation } from "../components/Navigation";
 import { Footer } from "../components/Footer";
 import { ArrowRight, Users, Heart, Trophy, Target, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router";
-import logo from "../../imports/hosur_runners_circular_badge.png";
 import runner01 from "../../imports/runner-gallery/runner-01.jpg";
 import runner02 from "../../imports/runner-gallery/runner-02.jpg";
 import runner03 from "../../imports/runner-gallery/runner-03.jpg";
@@ -82,7 +81,6 @@ export function Home() {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white">
           <div className="max-w-2xl">
-            <img src={logo} alt="Hosur Runners Club" className="h-32 w-32 mb-6 drop-shadow-2xl" />
             <h1 className="text-5xl md:text-7xl font-bold mb-4">
               We Run <span className="text-[#FF8C00]">We Rise</span>
             </h1>
