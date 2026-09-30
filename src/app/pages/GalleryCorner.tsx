@@ -38,20 +38,16 @@ const galleryPhotos = [
 ];
 
 export function GalleryCorner() {
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-
-  const closeLightbox = () => setSelectedIndex(null);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const showPrevious = () => {
     setSelectedIndex((current) =>
-      current === null ? null : (current - 1 + galleryPhotos.length) % galleryPhotos.length,
+      (current - 1 + galleryPhotos.length) % galleryPhotos.length,
     );
   };
 
   const showNext = () => {
-    setSelectedIndex((current) =>
-      current === null ? null : (current + 1) % galleryPhotos.length,
-    );
+    setSelectedIndex((current) => (current + 1) % galleryPhotos.length);
   };
 
   return (
@@ -59,99 +55,67 @@ export function GalleryCorner() {
       <Navigation />
 
       <main className="flex-1">
-        <section className="py-20 bg-gradient-to-br from-[#0066B3] to-[#005094] text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm font-semibold mb-5">
+        <section className="py-14 md:py-16 bg-gradient-to-br from-[#0066B3] to-[#005094] text-white text-center">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <span className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm font-semibold mb-4">
               Hosur Runners Club
             </span>
-            <h1 className="text-4xl md:text-6xl font-bold mb-5">Gallery Corner</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">Gallery Corner</h1>
             <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto">
               Event moments, race-day memories, achievements, and the people who make our running community special.
             </p>
           </div>
         </section>
 
-        <section className="py-16 md:py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {galleryPhotos.map((photo, index) => (
-                <button
-                  key={photo.src}
-                  type="button"
-                  onClick={() => setSelectedIndex(index)}
-                  className="group relative h-72 md:h-80 overflow-hidden rounded-3xl bg-white shadow-lg hover:shadow-2xl transition-all text-left focus:outline-none focus:ring-4 focus:ring-[#0066B3]/30"
-                  aria-label={`Open gallery image ${index + 1}`}
-                >
-                  <img
-                    src={photo.src}
-                    alt={photo.alt}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading={index < 6 ? "eager" : "lazy"}
+        <section className="bg-black">
+          <div className="relative w-full h-[70vh] md:h-[78vh] min-h-[480px] overflow-hidden flex items-center justify-center">
+            <img
+              src={galleryPhotos[selectedIndex].src}
+              alt={galleryPhotos[selectedIndex].alt}
+              className="w-full h-full object-contain"
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none" />
+
+            <button
+              type="button"
+              onClick={showPrevious}
+              aria-label="Previous gallery image"
+              className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/20 backdrop-blur-sm text-white flex items-center justify-center hover:bg-white/35 transition-colors"
+            >
+              <ChevronLeft size={32} />
+            </button>
+
+            <button
+              type="button"
+              onClick={showNext}
+              aria-label="Next gallery image"
+              className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/20 backdrop-blur-sm text-white flex items-center justify-center hover:bg-white/35 transition-colors"
+            >
+              <ChevronRight size={32} />
+            </button>
+
+            <div className="absolute bottom-6 left-0 right-0 z-10 flex flex-col items-center gap-3">
+              <span className="text-white text-sm md:text-base font-semibold drop-shadow-lg">
+                Event Moment {String(selectedIndex + 1).padStart(2, "0")} &nbsp;•&nbsp; {selectedIndex + 1} / {galleryPhotos.length}
+              </span>
+              <div className="flex items-center gap-2">
+                {galleryPhotos.map((_, index) => (
+                  <button
+                    key={index}
+                    type="button"
+                    onClick={() => setSelectedIndex(index)}
+                    aria-label={`Show gallery image ${index + 1}`}
+                    className={`h-2 rounded-full transition-all ${
+                      index === selectedIndex ? "w-8 bg-white" : "w-2 bg-white/50 hover:bg-white/80"
+                    }`}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent opacity-80" />
-                  <span className="absolute bottom-4 left-4 text-white font-semibold text-sm">
-                    Event Moment {String(index + 1).padStart(2, "0")}
-                  </span>
-                </button>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </section>
       </main>
-
-      {selectedIndex !== null && (
-        <div
-          className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Gallery image viewer"
-          onClick={closeLightbox}
-        >
-          <button
-            type="button"
-            onClick={closeLightbox}
-            aria-label="Close image viewer"
-            className="absolute top-5 right-5 z-20 w-11 h-11 rounded-full bg-white/15 text-white flex items-center justify-center hover:bg-white/25 transition-colors"
-          >
-            <X size={26} />
-          </button>
-
-          <button
-            type="button"
-            onClick={(event) => {
-              event.stopPropagation();
-              showPrevious();
-            }}
-            aria-label="Previous gallery image"
-            className="absolute left-3 md:left-8 z-20 w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/15 text-white flex items-center justify-center hover:bg-white/25 transition-colors"
-          >
-            <ChevronLeft size={28} />
-          </button>
-
-          <img
-            src={galleryPhotos[selectedIndex].src}
-            alt={galleryPhotos[selectedIndex].alt}
-            className="max-h-[88vh] max-w-[92vw] object-contain rounded-xl shadow-2xl"
-            onClick={(event) => event.stopPropagation()}
-          />
-
-          <button
-            type="button"
-            onClick={(event) => {
-              event.stopPropagation();
-              showNext();
-            }}
-            aria-label="Next gallery image"
-            className="absolute right-3 md:right-8 z-20 w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/15 text-white flex items-center justify-center hover:bg-white/25 transition-colors"
-          >
-            <ChevronRight size={28} />
-          </button>
-
-          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 text-white/80 text-sm font-medium">
-            {selectedIndex + 1} / {galleryPhotos.length}
-          </div>
-        </div>
-      )}
 
       <Footer />
     </div>
